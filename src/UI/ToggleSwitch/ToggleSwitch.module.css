@@ -1,0 +1,46 @@
+.toggleSwitchLabel{
+    position: relative;
+    background-color: var(--color-neutral-300);
+    border-radius: 999px;
+    padding: 2px;
+    width: 36px;
+    height: 20px;
+
+    transition: background-color var(--transition-duration);
+}
+
+.toggleSwitchLabel:hover{
+    cursor: pointer;
+}
+
+.toggleSwitchLabel:before{
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-neutral-0);
+
+    transition: transform var(--transition-duration);
+}
+
+.toggleSwitchInput:checked + .toggleSwitchLabel{
+    background-color: var(--color-active);
+}
+
+.toggleSwitchInput:checked + .toggleSwitchLabel:hover{
+    background-color: var(--color-red-500);
+}
+
+.toggleSwitchInput:checked + .toggleSwitchLabel:before{
+    transform: translateX(100%);
+}
+
+.toggleSwitchInput:disabled + .toggleSwitchLabel{
+    background-color: var(--color-neutral-100);
+}
+
+.toggleSwitchInput:focus + .toggleSwitchLabel{
+    outline: solid 2px var(--color-red-400);
+    outline-offset: 2px;
+}

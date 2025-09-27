@@ -1,0 +1,20 @@
+.button{
+    border: 1px solid var(--color-border-button);
+    border-radius: 999px;
+    padding: 8px 16px;
+    background-color: transparent;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: var(--color-titles);
+
+    transition: color var(--transition-duration), background-color var(--transition-duration);
+
+    &:hover{
+        cursor: pointer;
+        background-color: var(--color-red-700);
+        color: var(--color-neutral-0);
+    }
+}
