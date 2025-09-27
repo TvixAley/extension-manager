@@ -7,7 +7,7 @@ const ExtensionCard = ({extension, setActive, remove}) => {
     return (
         <div className={classes.card}>
             <div className={classes.info}>
-                <img className={classes.icon} src={extension.logo} alt="" width={60} height={60}/>
+                <img className={classes.icon} src={new URL(`../../assets/icons/${extension.logo}`, import.meta.url).href} alt="" width={60} height={60}/>
                 <div className={classes.details}>
                     <div className={classes.name}>{extension.name}</div>
                     <p className={classes.description}>{extension.description}</p>
